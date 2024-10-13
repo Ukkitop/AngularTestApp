@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularTestApp.Server", "AngularTestApp.Server\AngularTestApp.Server.csproj", "{72B9169F-8E83-49CF-A084-1F1A6F716AA9}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "angulartestapp.client", "angulartestapp.client\angulartestapp.client.esproj", "{95915634-1285-4162-9681-0EC8CADED7B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularTestApp.Database", "AngularTestApp.Database\AngularTestApp.Database.csproj", "{0BBEF095-22A3-4C65-92C9-068F84A20380}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72B9169F-8E83-49CF-A084-1F1A6F716AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72B9169F-8E83-49CF-A084-1F1A6F716AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72B9169F-8E83-49CF-A084-1F1A6F716AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72B9169F-8E83-49CF-A084-1F1A6F716AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95915634-1285-4162-9681-0EC8CADED7B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95915634-1285-4162-9681-0EC8CADED7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95915634-1285-4162-9681-0EC8CADED7B1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{95915634-1285-4162-9681-0EC8CADED7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95915634-1285-4162-9681-0EC8CADED7B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95915634-1285-4162-9681-0EC8CADED7B1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0BBEF095-22A3-4C65-92C9-068F84A20380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BBEF095-22A3-4C65-92C9-068F84A20380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BBEF095-22A3-4C65-92C9-068F84A20380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BBEF095-22A3-4C65-92C9-068F84A20380}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC01AAB5-E336-4C92-9661-F8C9CAC3B61B}
+	EndGlobalSection
+EndGlobal

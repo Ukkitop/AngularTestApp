@@ -1,0 +1,62 @@
+<div class="form-container">
+  <form class="example-form" [formGroup]="register">
+    <div *ngIf="firstStep">
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="emailFormControl" [errorStateMatcher]="matcher"
+          placeholder="Ex. pat@example.com" required type="email">
+        <mat-error *ngIf="emailInput!.hasError('email')">Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailInput">Please enter an email
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="'password'" formControlName="password" required>
+        <mat-error *ngIf="passwordInput!.hasError('pattern')">Must be number, letter and 2 character long</mat-error>
+        <mat-error *ngIf="passwordInput">Please enter a password
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Confirm password</mat-label>
+        <input matInput [type]="'password'" formControlName="confirmPassword" required
+          pattern="{{register.value.password}}">
+        <mat-error *ngIf="register.value.confirmPassword">Passwords do not match.</mat-error>
+      </mat-form-field>
+      <div class="full-width">
+        <mat-checkbox required [(ngModel)]="checked" [ngModelOptions]="{standalone: true}">Agreed work for
+          food</mat-checkbox>
+        <mat-error *ngIf="checkboxError">Please check the box
+        </mat-error>
+      </div>
+      <button mat-stroked-button (click)="checkInputs()">Go to step 2</button>
+    </div>
+    <div *ngIf="secondStep">
+      <mat-form-field class="full-width">
+        <mat-label>Favorite food</mat-label>
+        <mat-select [(value)]="select1" (selectionChange)="countryChanged()">
+          @for (country of countries; track country) {
+          <mat-option [value]="country.id">{{country.name}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-error *ngIf="countrySelectError">Please select country
+      </mat-error>
+
+      <mat-form-field class="full-width">
+        <mat-label>Favorite food</mat-label>
+        <mat-select [(value)]="select2">
+          @for (province of provinces; track province) {
+          <mat-option [value]="province.id">{{province.name}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-error *ngIf="provinceSelectError">Please select province
+      </mat-error>
+
+      <button mat-stroked-button (click)="checkInputs2()">Save</button>
+    </div>
+  </form>
+</div>
